@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Run fetch script
-        run: node fetchrates.js
+        run: node fetchRates.js
 
       - name: Remove debug file
         # fetchrates.js writes last.html for debugging locally; avoid committing it
