@@ -2,8 +2,16 @@ name: Update rates.json
 
 on:
   schedule:
-    # Runs daily at 11:00 NPT (Nepal Time = UTC+5:45) -> 05:15 UTC
-    - cron: '15 5 * * *'
+    # Runs daily at the following Nepal times (NPT = UTC+5:45).
+    # Converted to UTC because GitHub cron uses UTC:
+    # - 00:00 NPT -> 18:15 UTC  -> cron: '15 18 * * *'
+    # - 10:01 NPT -> 04:16 UTC  -> cron: '16 4 * * *'
+    # - 11:01 NPT -> 05:16 UTC  -> cron: '16 5 * * *'
+    # - 12:01 NPT -> 06:16 UTC  -> cron: '16 6 * * *'
+    - cron: '15 18 * * *'
+    - cron: '16 4 * * *'
+    - cron: '16 5 * * *'
+    - cron: '16 6 * * *'
   workflow_dispatch: {}
 
 jobs:
