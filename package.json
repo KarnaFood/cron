@@ -1,0 +1,13 @@
+{
+  "name": "fetch-rates",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node cronjobs.js"
+  },
+  "dependencies": {
+    "jsdom": "^27.1.0",
+    "node-fetch": "^3.3.2",
+    "node-cron": "^3.0.0"
+  }
+}

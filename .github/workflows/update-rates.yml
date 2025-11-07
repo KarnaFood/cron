@@ -1,0 +1,46 @@
+name: Update rates.json
+
+on:
+  schedule:
+    # Runs daily at 11:00 NPT (Nepal Time = UTC+5:45) -> 05:15 UTC
+    - cron: '15 5 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  update-rates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run fetch script
+        run: node fetchrates.js
+
+      - name: Remove debug file
+        # fetchrates.js writes last.html for debugging locally; avoid committing it
+        run: rm -f last.html || true
+
+      - name: Commit rates.json if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rates.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to rates.json"
+          else
+            git commit -m "chore: update rates.json [skip ci]" || echo "commit failed"
+            git push
+          fi
