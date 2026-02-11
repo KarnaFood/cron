@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-11T07:30:24.032Z",
+  "lastUpdated": "2026-02-11T19:18:42.684Z",
   "rates": [
     {
       "item": "Gold Hallmark",
@@ -24,12 +24,12 @@
     {
       "item": "Gold Tajabi",
       "unit": "10 gram",
-      "rate": "260240.85"
+      "rate": "260231.4"
     },
     {
       "item": "Silver",
       "unit": "10 gram",
-      "rate": "4536"
+      "rate": "4535.50"
     }
   ]
 }
