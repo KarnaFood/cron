@@ -1,35 +1,35 @@
 {
-  "lastUpdated": "2026-05-06T20:00:05.164Z",
+  "lastUpdated": "2026-05-07T07:18:02.411Z",
   "rates": [
     {
       "item": "Gold Hallmark",
       "unit": "Tola",
-      "rate": "296800"
+      "rate": "298600"
     },
     {
       "item": "Gold Tajabi",
       "unit": "Tola",
-      "rate": "293800"
+      "rate": "295600"
     },
     {
       "item": "Silver",
       "unit": "Tola",
-      "rate": "5055"
+      "rate": "5155"
     },
     {
       "item": "Gold Hallmark",
       "unit": "10 gram",
-      "rate": "254460"
+      "rate": "256000"
     },
     {
       "item": "Gold Tajabi",
       "unit": "10 gram",
-      "rate": "251915.4"
+      "rate": "253440"
     },
     {
       "item": "Silver",
       "unit": "10 gram",
-      "rate": "4334"
+      "rate": "4419.50"
     }
   ]
 }
