@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-18T04:51:57.953Z",
+  "lastUpdated": "2026-08-18T05:41:41.617Z",
   "rates": [
     {
       "item": "Gold Hallmark",
@@ -14,7 +14,7 @@
     {
       "item": "Silver",
       "unit": "Tola",
-      "rate": "4770"
+      "rate": "4755"
     },
     {
       "item": "Gold Hallmark",
@@ -29,7 +29,7 @@
     {
       "item": "Silver",
       "unit": "10 gram",
-      "rate": "4089.5"
+      "rate": "4076.5"
     }
   ]
 }
